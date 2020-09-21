@@ -25,8 +25,10 @@
         </div>
         <!-- ./container__main start -->
         <div class="container__main">
-            <h1 class="container__title">Заголовок страницы</h1>
-            <h3 class="container__subtitle">В отличие от пылевого и ионного хвостов, направление поступает </h3>
+            <div class="container__main-title">
+                <h1 class="container__title">Заголовок страницы</h1>
+                <h3 class="container__subtitle">В отличие от пылевого и ионного хвостов, направление поступает </h3>
+            </div>
             <div class="card">
                 <div class="card__info">
                     <div class="title">Информация по оплате:</div>
@@ -42,7 +44,31 @@
                         <span>Данные банковской карты</span>
                     </div>
                     <div class="card__details">
-
+                        <div class="card__form">
+                            <form>
+                                <div class="card__fron-side">
+                                    <div class="card__form-inputs">
+                                        Номер карты
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                    <div class="card__form-date">
+                                        Срок действия
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                    <div class="form__user-name">
+                                        <input type="text" placeholder="Держатель карты">
+                                    </div>
+                                </div>
+                                <div class="form__ccv">
+                                    <input type="text">
+                                </div>
+                                <button type="submit">Отправить</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
