@@ -238,6 +238,15 @@ li {
 /* footer */
 footer {
   background: #373c43;
+  color: #89909d;
+  font-size: 12px;
+
+}
+
+.footer__text {
+  padding: 15px;
+  width: 650px;
+  margin-left: 15px;
 }
 
 /* footer end */
