@@ -2,102 +2,115 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>CHULCOV.RU</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>CHULCOV.RU</title>
 </head>
 
 <body>
-    <!-- /.container start-->
-    <div class="container">
-        <div class="menu">
-            <div class="menu__logo">
-                <span>CHULAKOV RU</span>
-            </div>
-            <ul class="menu__link">
-                <li><a href="#">Первая ссылка</a></li>
-                <li><a href="#">Вторая ссылка</a></li>
-                <li><a href="#">Третья ссылка</a></li>
-                <li><a href="#">Личный кабинет</a></li>
-                <li><a href="#">Выйти</a></li>
-            </ul>
-        </div>
-        <!-- ./container__main start -->
-        <div class="container__main">
-            <div class="container__main-title">
-                <h1 class="container__title">Заголовок страницы</h1>
-                <h3 class="container__subtitle">В отличие от пылевого и ионного хвостов, направление поступает </h3>
-            </div>
-            <div class="card">
-                <div class="card__info">
-                    <div class="title">Информация по оплате:</div>
-                    <div class="card__account-number">
-                        Номер счета: <span id="number">87123658716587</span>
-                    </div>
-                    <div class="card__amount-of-payment">
-                        Сумма платежа: <span id="payment">100 руб.</span>
-                    </div>
-                </div>
-                <div class="card__bank-card-details">
-                    <div class="title">
-                        <span>Данные банковской карты</span>
-                    </div>
-                    <div class="card__details">
-                        <div class="card__form">
-                            <form>
-                                <div class="card__fron-side">
-                                    <div class="card__form-inputs">
-                                        Номер карты
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                    <div class="card__form-date">
-                                        Срок действия
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                    <div class="form__user-name">
-                                        <input type="text" placeholder="Держатель карты">
-                                    </div>
-                                </div>
-                                <div class="form__ccv">
-                                    <input type="text">
-                                </div>
-                                <button type="submit">Отправить</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.footer start -->
-            <footer class="footer">
-                <div class="footer__text">
-                    <span>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть
-                        артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет
-                        систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-                        Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-                        Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-                        Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально
-                        дает
-                        уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает
-                        вибрирующий
-                        волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа
-                        поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка
-                        неба
-                        заставляет иначе взглянуть на то, что такое волчок.</span>
-                </div>
-            </footer>
-            <!-- ./footer end -->
-        </div>
-        <!-- ./container__main end -->
+  <!-- /.container start-->
+  <div class="container">
+    <div class="menu">
+      <div class="menu__logo">
+        <span class="menu__logo-text">CHULAKOV</span><span>RU</span>
+      </div>
+      <ul class="menu__link">
+        <li><a href="#">Первая ссылка</a></li>
+        <li><a href="#">Вторая ссылка</a></li>
+        <li><a href="#">Третья ссылка</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Выйти</a></li>
+      </ul>
     </div>
-    <!-- /.container end-->
+    <!-- ./container__main start -->
+    <div class="container__main">
+      <div class="container__main-title">
+        <h1 class="container__title">Заголовок страницы</h1>
+        <h3 class="container__subtitle">В отличие от пылевого и ионного хвостов, направление поступает
+          в лимногляциальный часовой угол </h3>
+      </div>
+      <!-- ./card start -->
+      <div class="card">
+        <div class="card__info">
+          <div class="card__title">Информация по оплате:</div>
+          <div class="card__account-number">
+            <span id="card__number"> Номер счета:</span> <span id="number">87123658716587</span>
+          </div>
+          <div class="card__amount-of-payment">
+            <span id="card__sum">Сумма платежа:</span> <span id="payment">100 руб.</span>
+          </div>
+        </div>
+        <div class="card__form">
+          <form class="payment-card">
+            <div class="card__title-info">
+              <span id="card__info-title">Данные банковской карты</span>
+            </div>
+            <div class="payment-card__front">
+              <div class="payment-card__group">
+                <span class="payment-card__number-card">Номер карты</span>
+                <label class="payment-card__field">
+                  <input type="text" class="payment-card__input-number">
+                  <input type="text" class="payment-card__input-number">
+                  <input type="text" class="payment-card__input-number">
+                  <input type="text" class="payment-card__input-number">
+                </label>
+              </div>
+              <div class="payment-card__group">
+              </div>
+              <div class="payment-card__group payment-card__footer">
+                <label class="payment-card__field payment-card__month">
+                  <select></select>
+                </label>
+                <span class="payment-card__separator">/</span>
+                <label class="payment-card__field payment-card__year">
+                  <select></select>
+                </label>
+              </div>
+              <div class="payment-card__group">
+                <label class="payment-card__field">
+                  <input class="payment-card__input" placeholder="Держатель карты">
+                </label>
+              </div>
+            </div>
+            <div class="payment-card__back">
+              <div class="payment-card__group">
+                <label class="payment-card__field payment-card__cvc">
+                  <input type="text" class="payment-card__input">
+                </label>
+              </div>
+            </div>
+            <button class="card__btn-form">Оплатить</button>
+          </form>
+        </div>
+      </div>
+      <!-- ./card end -->
+      <!-- /.footer start -->
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть
+            артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет
+            систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+            Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+            Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+            Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально
+            дает
+            уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает
+            вибрирующий
+            волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа
+            поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка
+            неба
+            заставляет иначе взглянуть на то, что такое волчок.</span>
+        </div>
+      </footer>
+      <!-- ./footer end -->
+    </div>
+    <!-- ./container__main end -->
+  </div>
+  <!-- /.container end-->
 
 
-    <script src="./script/script.js"></script>
+  <script src="./script/script.js"></script>
 </body>
 
 </html>

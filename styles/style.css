@@ -1,98 +1,243 @@
+@font-face {
+  font-family: Sans;
+  src: url(fonts/OpenSans-Bold.ttf);
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    max-width: 1200px;
-    margin: auto;
-    background: #101114;
+  max-width: 1000px;
+  margin: auto;
+  background: #101114;
 }
 
 /* container */
 
 .container__main {
-    width: 70%;
-    order: 2;
+  width: 70%;
+  order: 2;
 }
 
 .container {
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
-    display: flex;
-    flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container__main-title {
-    background: #00aeef;
-    padding: 15px;
+  background: #00aeef;
+  padding: 15px;
 }
 
 /* container end */
 
 /* menu */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 li {
-    border-top: 1px solid #373941;
+  border-top: 1px solid #373941;
 }
 
 .menu {
-    width: 250px;
-    order: 1;
-    width: 30%;
-    min-height: calc(100vh - 200px);
+  width: 250px;
+  order: 1;
+  width: 30%;
+  min-height: calc(100vh - 200px);
 }
 
 
 .menu__link a {
-    background: #1f2229;
-    color: #ffffff;
-    padding: 30px;
-    display: block;
+  background: #1f2229;
+  color: #ffffff;
+  padding: 30px;
+  display: block;
 }
 
 .menu__link a:hover {
-    background: #2a2d37;
-    color: #808592;
+  background: #2a2d37;
+  color: #808592;
+}
+
+.active {
+  background: #2a2d37;
+  color: #808592;
 }
 
 .menu__logo {
-    background: #1f2229;
-    color: #ffffff;
-    padding: 30px;
-    display: block;
+  background: #1f2229;
+  color: #ffffff;
+  padding: 4.8rem;
+  display: block;
 }
 
 /* menu end*/
 
 /* card */
+.card__title {
+  padding: 40px 20px 10px 40px;
+  font-size: 16px;
+  color: #8494ab;
+}
+
+.card__title-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Sans;
+}
+
+#card__number {
+  padding: 40px;
+  font-size: 16px;
+  color: #8494ab;
+}
+
+#card__sum {
+  padding: 40px;
+  font-size: 16px;
+  color: #8494ab;
+}
+
+#card__info-title {
+  color: #383d43;
+  font-size: 20px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
 .card {
-    background: #f7f8f8;
+  background: #f7f8f8;
+}
+
+.card__btn-form {
+  background: #98c100;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  color: #fff;
+  margin: 2rem;
+  border-radius: 5px;
+  font-family: Sans;
 }
 
 .card__fron-side {
-    border: 1px solid #e4e9ee;
-    color: #8494ab;
-    width: 400px;
-    border-radius: 6%;
+  border: 1px solid #e4e9ee;
+  color: #8494ab;
+  width: 400px;
+  border-radius: 6%;
 }
 
-.card__form-inputs input {
-    width: 50px;
+.payment-card {
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+
+.payment-card__front {
+  width: 65%;
+  padding: 5%;
+  margin-left: 1.9rem;
+  border-radius: 10px;
+  background-color: #f7f8f8;
+  border: 1px solid #a29e97;
+
+  position: relative;
+  z-index: 1;
+}
+
+.payment-card__back {
+  width: 65%;
+  padding: 40.3% 5% 10%;
+  text-align: end;
+  border-radius: 10px;
+  border: 1px solid #dad9d6;
+  margin: 25% 5% 15%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.payment-card__back::before {
+  content: "";
+  width: 100%;
+  height: 3.5rem;
+  background-color: #e4e9ee;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+}
+
+.payment-card__group:nth-child(n+2) {
+  margin-top: 2rem;
+}
+
+.payment-card__field {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.payment-card__month,
+.payment-card__year,
+.payment-card__cvc {
+  width: 25%;
+}
+
+.payment-card__hint {
+  position: absolute;
+  left: -9999px;
+}
+
+.payment-card__number-card {
+  padding: 2rem;
+  color: #8494ab;
+  font-size: 30px;
+}
+
+.payment-card__input-number {
+  box-sizing: border-box;
+  width: 6rem;
+  padding: 1rem;
+  border: 3px solid #d0d0ce;
+  margin-left: 1rem;
+
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.payment-card__input:focus {
+  outline: none;
+  border-color: #fdde60;
+}
+
+.payment-card__caption {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.payment-card__separator {
+  font-size: 3.2rem;
+  color: #c4c4c3;
+
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* card end */
 /* footer */
 footer {
-    background: #373c43;
+  background: #373c43;
 }
 
 /* footer end */
