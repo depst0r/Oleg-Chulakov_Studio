@@ -13,7 +13,7 @@
   <div class="container">
     <div class="menu">
       <div class="menu__logo">
-        <span class="menu__logo-text">CHULAKOV</span><span>RU</span>
+        <span class="menu__logo-text">CHULAKOV</span><span class="ru">RU</span>
       </div>
       <ul class="menu__link">
         <li><a href="#">Первая ссылка</a></li>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="card__form">
-          <form class="payment-card">
+          <form class="payment-card" action="#">
             <div class="card__title-info">
               <span id="card__info-title">Данные банковской карты</span>
             </div>
@@ -50,33 +50,59 @@
               <div class="payment-card__group">
                 <span class="payment-card__number-card">Номер карты</span>
                 <label class="payment-card__field">
-                  <input type="text" class="payment-card__input-number">
-                  <input type="text" class="payment-card__input-number">
-                  <input type="text" class="payment-card__input-number">
-                  <input type="text" class="payment-card__input-number">
+                  <!-- required -->
+                  <input type="text" class="payment-card__input-number" data-number-card>
+                  <input type="text" class="payment-card__input-number" data-number-card>
+                  <input type="text" class="payment-card__input-number" data-number-card>
+                  <input type="text" class="payment-card__input-number" data-number-card>
                 </label>
               </div>
               <div class="payment-card__group">
               </div>
               <div class="payment-card__group payment-card__footer">
+                <span class="validity">Срок действия</span>
                 <label class="payment-card__field payment-card__month">
-                  <select></select>
+                  <select data-select-mother>
+                    <option value="">01</option>
+                    <option value="">02</option>
+                    <option value="">03</option>
+                    <option value="">04</option>
+                    <option value="">05</option>
+                    <option value="">06</option>
+                    <option value="">07</option>
+                    <option value="">08</option>
+                    <option value="">09</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                  </select>
                 </label>
-                <span class="payment-card__separator">/</span>
                 <label class="payment-card__field payment-card__year">
-                  <select></select>
+                  <select data-selecr-year>
+                    <option value="">2016</option>
+                    <option value="">2017</option>
+                    <option value="">2018</option>
+                    <option value="">2019</option>
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+                    <option value="">2022</option>
+                    <option value="">2023</option>
+                    <option value="">2024</option>
+                  </select>
                 </label>
               </div>
               <div class="payment-card__group">
                 <label class="payment-card__field">
-                  <input class="payment-card__input" placeholder="Держатель карты">
+                  <input class="payment-card__user" placeholder="Держатель карты">
                 </label>
               </div>
             </div>
             <div class="payment-card__back">
+              <span id="cvv">Код CVV2 / CVC2</span>
+              <input type="text" class="payment-card__input">
               <div class="payment-card__group">
                 <label class="payment-card__field payment-card__cvc">
-                  <input type="text" class="payment-card__input">
+                  <!-- <input type="text" class="payment-card__input"> -->
                 </label>
               </div>
             </div>
