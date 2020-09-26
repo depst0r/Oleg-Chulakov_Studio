@@ -1,49 +1,51 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-
-    const form = document.querySelector('form'),
-        btn = document.querySelector('.card__btn-form');
-
-    const messages = {
-        errorNumber: 'Введите коректные данные! [0 - 9]',
-        errorName: 'Введите имя латинскими символами [A - z]',
-    }
-
-    const month = [01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12];
-    const year = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
-
-    function dateCard() {
-        const years = document.querySelector('[data-selecr-year]'),
-            options = years.querySelectorAll('option');
-        console.log(options);
-    };
-
-
-    dateCard();
+    const form = document.querySelector('form');
 
     form.addEventListener('submit', e => {
         e.preventDefault();
     })
 
+    function burgerMenu() {
+        const icon = document.querySelector('.icon');
+        const link = document.querySelector('.menu__link');
 
-    const numberCard = document.querySelectorAll('[data-number-card]'),
-        userName = document.querySelector('.payment-card__user'),
-        cvc = document.querySelector('.payment-card__input');
+        icon.addEventListener('click', () => {
+            icon.classList.toggle('active');
 
-    const __RegExp = /^[0-9]+$/;
+            if (icon.classList.contains('active')) {
+                link.style.display = 'block';
+            } else {
+                link.style.display = '';
+            };
 
-    numberCard.forEach(input => {
-        input.maxLength = "4";
-        input.minLength = "4";
-        input.addEventListener('change', () => {
-            if (input.value.match(__RegExp)) {
-                input.classList.remove('error')
-            }
-            else {
-                input.classList.add('error')
-            }
-        })
+        });
+    }
 
-    })
 
+    function validate() {
+        const numberCard = document.querySelectorAll('[data-number-card]'),
+            userName = document.querySelector('.payment-card__user'),
+            cvc = document.querySelector('.payment-card__input');
+
+        const __RegExp = /^[0-9]+$/;
+
+        numberCard.forEach(input => {
+            input.maxLength = "4";
+            input.minLength = "4";
+            input.addEventListener('change', () => {
+                if (input.value.match(__RegExp)) {
+                    input.classList.remove('error');
+                }
+                else {
+                    input.classList.add('error');
+                }
+            })
+
+        });
+
+    };
+
+    burgerMenu();
+    validate();
 });
