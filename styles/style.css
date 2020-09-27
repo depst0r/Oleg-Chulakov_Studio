@@ -317,16 +317,17 @@ li {
   box-sizing: border-box;
   width: 20%;
   padding: 1rem;
-  border: 1px solid #d0d0ce;
+  border: 1px solid #8494ab;
 }
 
 .payment-card__input:focus,
 [data-number-card]:focus,
 .payment-card__user:focus,
 .year:focus,
-[data-select-mother]:focus {
+[data-select-mother]:focus,
+[data-select-year]:focus {
   outline: none;
-  border-color: #8494ab;
+  border-color: #d3d322;
 }
 
 .payment-card__caption {
@@ -360,7 +361,11 @@ footer {
 /* JavaScript - classes */
 
 .error {
-  border-color: red;
+  border: 2px solid red;
+}
+
+.without_mistakes {
+  border-color: green;
 }
 
 /* JavaScript - classes end */
