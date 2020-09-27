@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
         text = document.querySelector('#text');
 
     const submit = () => {
-        console.log('su')
+        alert('Форма успешно отправленна');
     }
 
     let isValidate = false;
@@ -42,11 +42,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
 
-
         if (elem.name === 'cvc') {
             if (!__RegExpNumberCard.test(elem.value) && elem.value !== '') {
                 elem.nextElementSibling.textContent =
-                    "Введите корректные данные";
+                    "Не корректные данные";
                 isValidate = false;
                 elem.classList.add('error');
             } else {
@@ -70,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         input.forEach(elem => {
             if (elem.value === '') {
-                text.textContent = "Заолните все поля";
+                text.textContent = "Заполните все поля";
                 isValidate = false;
                 elem.classList.add('error');
             } else {
@@ -85,59 +84,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
             form.reset();
         } else {
-            console.log('ggg')
+            console.error('Форма не отправленна')
         }
     })
 
-    // function validate() {
-    //     const numberCard = document.querySelectorAll('[data-number-card]'),
-    //         userName = document.querySelector('.payment-card__user'),
-    //         cvc = document.querySelector('.payment-card__input'),
-    //         btn = document.querySelector('.card__btn-form');
-
-    //     const __RegExp = /^[0-9]+$/;
-    //     const __RegExpName = /^[A-z]+$/;
-
-    //     userName.addEventListener('change', () => {
-    //         userName.minLength = "4";
-    //         if (userName.value.match(__RegExpName)) {
-    //             userName.classList.remove('error');
-    //             userName.classList.add('without_mistakes');
-    //         } else {
-    //             userName.classList.add('error');
-    //             userName.classList.remove('without_mistakes');
-    //         }
-    //     })
-
-    //     numberCard.forEach(input => {
-    //         input.maxLength = "4";
-    //         input.minLength = "4";
-    //         input.addEventListener('change', () => {
-    //             if (input.value.match(__RegExp)) {
-    //                 input.classList.remove('error');
-    //             }
-    //             else {
-    //                 input.classList.add('error');
-    //             }
-    //         })
-
-    //     })
-
-    //     cvc.addEventListener('change', () => {
-    //         cvc.maxLength = "3";
-    //         cvc.minLength = "3";
-    //         if (cvc.value.match(__RegExp)) {
-    //             cvc.classList.remove('error');
-    //         } else {
-    //             cvc.classList.add('error');
-    //         }
-    //     })
-
-    //     if (numberCard || cvc || userName == '') {
-    //         btn.classList.disabled = true
-    //     }
-
-    // }
 
     function burgerMenu() {
         const icon = document.querySelector('.icon'),
@@ -156,6 +106,5 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     burgerMenu();
-    // validate();
 
 });

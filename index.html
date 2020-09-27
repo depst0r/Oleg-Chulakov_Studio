@@ -94,6 +94,10 @@
                     <option value="">2024</option>
                   </select>
                 </label>
+                <div class="mobile_ccv">
+                  <input type="text" name="cvc" class="payment-card__input" placeholder="Код CVV2 / CVC2">
+                  <span id="text"></span>
+                </div>
               </div>
               <div class="payment-card__group">
                 <label class="payment-card__field">
@@ -105,10 +109,7 @@
             <div class="payment-card__back">
               <span id="cvv">Код CVV2 / CVC2</span>
               <input type="text" name="cvc" class="payment-card__input">
-              <div class="payment-card__group">
-                <label class="payment-card__field payment-card__cvc">
-                  <!-- <input type="text" class="payment-card__input"> -->
-                </label>
+              <div id="text">
               </div>
             </div>
             <button class="card__btn-form">Оплатить</button>
