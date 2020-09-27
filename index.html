@@ -97,13 +97,14 @@
               </div>
               <div class="payment-card__group">
                 <label class="payment-card__field">
-                  <input class="payment-card__user" placeholder="Держатель карты">
+                  <input class="payment-card__user" name="userName" placeholder="Держатель карты">
+                  <span id="text"></span>
                 </label>
               </div>
             </div>
             <div class="payment-card__back">
               <span id="cvv">Код CVV2 / CVC2</span>
-              <input type="text" class="payment-card__input">
+              <input type="text" name="cvc" class="payment-card__input">
               <div class="payment-card__group">
                 <label class="payment-card__field payment-card__cvc">
                   <!-- <input type="text" class="payment-card__input"> -->
